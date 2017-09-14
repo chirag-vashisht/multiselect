@@ -37,7 +37,6 @@ go to [http://0.0.0.0:3000](http://0.0.0.0:3000) or [http://localhost:3000](http
     * [Installing](#installing)
     * [Running the app](#running-the-app)
 * [Configuration](#configuration)
-* [AoT Don'ts](#aot-donts)
 * [External Stylesheets](#external-stylesheets)
 
 ## File Structure
