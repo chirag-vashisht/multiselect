@@ -20,38 +20,7 @@ import { MultiselectConfig } from '../models';
 @Component({
   selector: 'multiselect[ngModel]',
   templateUrl: './multiselect.component.html',
-  styles: [`.multiselect-container {
-                display: inline-block;
-                position: relative; }`,
-
-    `.top-section.with-border {
-                border-bottom: 1px solid #ccc; }`,
-
-    `.with-border > .dropdown-item {
-                margin-bottom: 4px; }`,
-
-    `.with-border {
-               margin-bottom: 4px; }`,
-
-    `.row-color {
-                width: 15px;
-                height: 15px;
-                display: inline-block;
-                position: relative;
-                top: 3px;
-                margin-right: 5px;
-                border-radius: 3px; }`,
-
-    `.scrollable-menu {
-                height: auto;
-                overflow-x: hidden; }`,
-
-    `.check-area {
-                width: 18px;
-                display: inline-block; }`,
-
-    `.dropdown-multiselect-clickable {
-               cursor: pointer; }`],
+  styles: [],
   providers: [NgModel]
 })
 export class MultiselectComponent implements ControlValueAccessor, OnInit {
