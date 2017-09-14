@@ -258,6 +258,7 @@ export class MultiselectComponent implements ControlValueAccessor, OnInit {
       return typeof (item.selected) === 'undefined' ?
         Object.assign({}, item, { selected: false }) : item;
     });
+    this.cd.viewToModelUpdate(newModel);
   }
 
 }

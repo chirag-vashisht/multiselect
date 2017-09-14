@@ -65,4 +65,11 @@ describe(`App`, () => {
     expect(comp.selectedGames).toEqual([comp.dropdownModel[0]]);
   });
 
+  it('should unset selected games on selection change', () => {
+    comp.dropdownModel[0].selected = false;
+    comp.onChange(new Event('test'));
+    expect(comp.selectedGames).toBeDefined();
+    expect(comp.selectedGames).toEqual([]);
+  });
+
 });

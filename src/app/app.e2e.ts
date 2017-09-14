@@ -9,26 +9,12 @@ describe('App', () => {
 
   it('should have a title', async () => {
     let subject = await browser.getTitle();
-    let result  = 'Angular demo';
+    let result = 'Angular demo';
     expect(subject).toEqual(result);
   });
 
-  it('should have header', async () => {
-    let subject = await element(by.css('h1')).isPresent();
-    let result  = true;
-    expect(subject).toEqual(result);
+  it('should have multiselect', async () => {
+    let subject = await element(by.tagName('multiselect')).isPresent();
+    expect(subject).toEqual(true);
   });
-
-  it('should have <home>', async () => {
-    let subject = await element(by.css('app home')).isPresent();
-    let result  = true;
-    expect(subject).toEqual(result);
-  });
-
-  it('should have buttons', async () => {
-    let subject = await element(by.css('button')).getText();
-    let result  = 'Submit Value';
-    expect(subject).toEqual(result);
-  });
-
 });
