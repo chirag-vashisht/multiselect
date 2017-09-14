@@ -31,6 +31,7 @@ go to [http://0.0.0.0:3000](http://0.0.0.0:3000) or [http://localhost:3000](http
 
 # Table of Contents
 * [File Structure](#file-structure)
+* [About Multiselect](#multiselect)
 * [Getting Started](#getting-started)
     * [Dependencies](#dependencies)
     * [Installing](#installing)
@@ -42,7 +43,7 @@ go to [http://0.0.0.0:3000](http://0.0.0.0:3000) or [http://localhost:3000](http
 ## File Structure
 Here's how it looks:
 ```
-angular-starter/
+multiselect/
  ├──config/                        * our configuration
  |   ├──helpers.js                 * helper functions for our configuration files
  |   ├──spec-bundle.js             * ignore this magic that sets up our Angular testing environment
@@ -87,6 +88,51 @@ angular-starter/
  ├──package.json                   * what npm uses to manage its dependencies
  └──webpack.config.js              * webpack main configuration file
 
+```
+# Multiselect
+## Markup
+```
+<multiselect [(ngModel)]="dropdownModel" (change)="onChange($event)" [dropdownConfig]="multiSelectOptions">
+    </multiselect>
+```
+In your code
+```
+import {
+  IDropdownItem,
+  IMultiselectConfig
+} from './modules/multiselect';
+
+public dropdownModel: IDropdownItem[];
+public multiSelectOptions: IMultiselectConfig;
+
+public ngOnInit() {
+    this.multiSelectOptions = {
+      searchBoxPlaceHolder: 'Search for games',
+      defaultButtonText: 'Games',
+    };
+    this.dropdownModel = [
+      {
+        id: 1,
+        label: 'CandyEat',
+        selected: false, // optional
+      },
+      {
+        id: 2,
+        label: 'OnionsPick',
+        selected: false, // optional
+      },
+      {
+        id: 3,
+        label: 'FannyDuck',
+        selected: false, // optional
+      },
+      {
+        id: 4,
+        label: 'Click-o-Wisp',
+        selected: false, // optional
+      }
+    ];
+  }
 ```
 
 # Getting Started
