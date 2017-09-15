@@ -133,6 +133,7 @@ public ngOnInit() {
     ];
   }
 ```
+## [Class Diagram](https://drive.google.com/file/d/0ByRi6DzZEDjLRVNRejNGcDY0WW8/view?usp=sharing)
 
 # Getting Started
 ## Dependencies
